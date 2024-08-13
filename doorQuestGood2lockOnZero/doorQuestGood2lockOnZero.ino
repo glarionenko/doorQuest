@@ -151,10 +151,10 @@ uint8_t digits[12][8][8] = {
   },
 };
 
-uint32_t orange = pixels.Color(255, 165, 0);  // Оранжевый цвет
-uint32_t red = pixels.Color(0, 0, 0);       // Красный цвет
-uint32_t green = pixels.Color(0, 255, 0);     // Зеленый цвет
-uint32_t black = pixels.Color(0, 0, 0);       // Черный цвет
+uint32_t numbersColor = pixels.Color(255, 0, 0);  // Оранжевый цвет
+uint32_t numbersBackgroundColor = pixels.Color(0, 0, 0);       // Красный цвет
+uint32_t openDoorColor = pixels.Color(0, 255, 0);     // Зеленый цвет
+uint32_t openDoorBackgroundColor = pixels.Color(0, 0, 0);       // Черный цвет
 
 int currentDigit = 10;  // Начинаем с цифры 10
 bool buttonLocked = false;  // Флаг блокировки кнопки
@@ -174,7 +174,7 @@ void setup() {
     DEBUG_PRINTLN(currentDigit);
   }
 
-  displayDigit(currentDigit, orange, red); // Отображаем цифру 10
+  displayDigit(currentDigit, numbersColor, numbersBackgroundColor); // Отображаем цифру 10
 }
 
 void loop() {
@@ -191,7 +191,7 @@ void loop() {
     DEBUG_PRINTLN("Кнопка нажата, блокируем и выключаем мосфет.");
     
     digitalWrite(MOSFET_PIN, LOW); // Выключаем мосфет
-    displayDigit(11, green, black); // Отображаем дополнительный символ
+    displayDigit(11, openDoorColor, openDoorBackgroundColor); // Отображаем дополнительный символ
 
     DEBUG_PRINTLN("Отображен дополнительный символ (11).");
 
@@ -208,7 +208,7 @@ void loop() {
       DEBUG_PRINTLN(currentDigit);
       
       digitalWrite(MOSFET_PIN, HIGH); // Включаем мосфет
-      displayDigit(currentDigit, orange, red);
+      displayDigit(currentDigit, numbersColor, numbersBackgroundColor);
     } else {
       DEBUG_PRINTLN("Достигнута цифра 0, больше не реагируем на кнопку.");
     }
