@@ -1,4 +1,3 @@
-##Подключение
 
 # Таблица A
 |   Pin | Description                                                                  |
@@ -25,3 +24,5 @@
 |     7 | Плюс питания матрицы 5v - розовый провод            |
 |     8 | земля питания матрицы - белый провод                |
 |     9 | Выход данных на матрицу - желтый провод             |
+
+Время открытия замка меняется здесь https://github.com/glarionenko/doorQuest/blob/24890ec36bf7b7172c775d007a364ccfb9897975/doorQuestGood2lockOnZero/doorQuestGood2lockOnZero.ino#L199
