@@ -26,3 +26,5 @@
 |     9 | Выход данных на матрицу - желтый провод             |
 
 Время открытия замка меняется здесь https://github.com/glarionenko/doorQuest/blob/24890ec36bf7b7172c775d007a364ccfb9897975/doorQuestGood2lockOnZero/doorQuestGood2lockOnZero.ino#L199
+
+Цвета текста и фона можно менять тут и в следующих строках https://github.com/glarionenko/doorQuest/blob/ed126eb9c38f0dd78611e38a95c68bdcb17962ed/doorQuestGood2lockOnZero/doorQuestGood2lockOnZero.ino#L154
